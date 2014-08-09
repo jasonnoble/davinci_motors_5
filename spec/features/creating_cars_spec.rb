@@ -4,7 +4,6 @@ feature "Creating Cars" do
   scenario "can create a car" do
     visit '/'
 
-    pending("Friday")
     click_link 'New Car'
 
     fill_in 'Make', with: 'Ford'
@@ -14,7 +13,7 @@ feature "Creating Cars" do
 
     click_button 'Create Car'
 
-    expect(page).to have_content('Car has been created.')
+    expect(page).to have_content('1967 Ford Mustang created')
 
   end
 end
