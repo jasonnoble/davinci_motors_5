@@ -4,7 +4,7 @@ FactoryGirl.define do
   factory :car do
     make "MyString"
     model "MyString"
-    year 1
+    year { (1905..2014).to_a.sample }
     price "9.99"
   end
 end

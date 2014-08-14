@@ -4,16 +4,21 @@ gem 'rspec-rails'
 gem 'guard-bundler'
 gem 'guard-rspec'
 gem 'factory_girl_rails'
+gem 'faker'
+
 group :test, :darwin, :development do
   gem 'ruby_gntp'
 end
 group :test do
   gem 'capybara'
-  gem 'shoulda-matchers', require: false
+  gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
+gem 'bcrypt'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
