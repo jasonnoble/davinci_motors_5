@@ -2,9 +2,9 @@
 
 FactoryGirl.define do
   factory :car do
-    make "MyString"
-    model "MyString"
-    year { (1905..2014).to_a.sample }
-    price "9.99"
+    make { Car::MAKES_AND_MODELS.keys.sample }
+    model { Car::MAKES_AND_MODELS[make].sample }
+    year { rand(30) + 1980 }
+    price { sprintf("%.02f", rand(10000.00) + 5000)}
   end
 end
